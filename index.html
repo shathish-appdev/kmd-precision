@@ -247,7 +247,7 @@
             <div class="menu-toggle">&#9776;</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#company">Company</a></li>
+                <li><a href="#company-heading">Company</a></li>
                 <li><a href="#capabilities">Capabilities</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#resources">Resources</a></li>
@@ -264,10 +264,9 @@
                 <img src="resources/logo.png" alt="KMD Precision Products Logo">
             </div>
         </section>
-
         <!-- Company Section -->
         <section id="company" class="container">
-            <h2>Company</h2>
+            <h2 id="company-heading">Company</h2>
             <p style="text-align: center;">Learn about our mission, values, and the dedicated team behind our success.</p>
             <div class="grid">
                 <div class="card">
@@ -421,7 +420,37 @@
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('show');
+            
+            // Close the menu when clicking outside of it
+            document.addEventListener('click', function closeMenu(e) {
+                if (!navMenu.contains(e.target) && !e.target.matches('.menu-toggle')) {
+                    navMenu.classList.remove('show');
+                    document.removeEventListener('click', closeMenu);
+                }
+            });
+        });
+
+        // Smooth scroll to section headers
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Get the height of the header
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollBy({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
 </body>
