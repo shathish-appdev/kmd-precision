@@ -6,47 +6,71 @@
     <title>KMD Precision Products</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #0056b3;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+            --card-background: #fff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         /* Navigation Styles */
         header {
-            background-color: #fff;
+            background-color: var(--card-background);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--card-shadow);
         }
+
         nav .container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
+
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-color);
             font-weight: 500;
             transition: color 0.3s;
         }
+
         nav ul li a:hover {
-            color: #007bff;
+            color: var(--primary-color);
         }
+
         /* Hero Section */
         #home {
             background: url('resources/hero.jpg') no-repeat center center/cover;
@@ -54,6 +78,7 @@
             padding: 100px 0;
             position: relative;
         }
+
         #home::before {
             content: '';
             position: absolute;
@@ -63,129 +88,54 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
         }
+
         #home .content {
             position: relative;
             z-index: 1;
             text-align: center;
         }
+
         #home img {
             max-width: 200px;
             margin-bottom: 20px;
         }
+
         #home h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+
         #home p {
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
         }
+
         /* Section Styles */
         section {
             padding: 60px 0;
         }
+
         h2 {
             text-align: center;
             margin-bottom: 40px;
             font-size: 2rem;
         }
+
         /* Grid Styles */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
+
         /* Card Styles */
         .card {
-            background-color: #fff;
-            border-radius: 5px;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-            transition: transform 0.3s;
-        }
-        .card img:hover {
-            transform: scale(1.05);
-        }
-        .card h3 {
-            margin-bottom: 10px;
-        }
-        .card p {
-            color: #666;
-        }
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-        /* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #ccc;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        footer p {
-            margin: 0;
-        }
-        /* Two Column Grid */
-        .grid-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        /* Unstyled List */
-        .list-unstyled {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .list-unstyled li {
-            margin-bottom: 10px;
-        }
-        /* Media Queries */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-            .grid-2col {
-                grid-template-columns: 1fr;
-            }
-            #home h1 {
-                font-size: 2rem;
-            }
-        }
-
-        .grid-2x2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, auto);
-            gap: 2rem;
-        }
-
-        .card {
-            background: #fff;
+            background-color: var(--card-background);
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
             transition: transform 0.3s ease;
         }
 
@@ -194,29 +144,80 @@
         }
 
         .card img {
-            width: 100%;
+            max-width: 100%;
             height: 200px;
             object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         .card h3 {
             margin-top: 0;
+            margin-bottom: 10px;
         }
 
-        /* Updated Navigation Styles */
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
+        .card p {
+            color: #666;
         }
 
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Two Column Grid */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Unstyled List */
+        .list-unstyled {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .list-unstyled li {
+            margin-bottom: 10px;
+        }
+
+        /* Feature Icons */
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
+                cursor: pointer;
+                font-size: 1.5rem;
             }
 
             nav ul {
@@ -226,8 +227,8 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: #fff;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: var(--card-background);
+                box-shadow: var(--card-shadow);
             }
 
             nav ul.show {
@@ -243,6 +244,14 @@
                 display: block;
                 padding: 10px 0;
             }
+
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+
+            #home h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -250,7 +259,7 @@
     <!-- Updated Header and Navigation -->
     <header>
         <nav class="container">
-            <div class="menu-toggle">&#9776;</div>
+            <!-- <div class="menu-toggle">&#9776;</div> -->
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#company">Company</a></li>
@@ -263,16 +272,16 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container">
+    <main>
         <!-- Home Section -->
         <section id="home">
-            <div class="content">
+            <div class="content container">
                 <img src="resources/logo.png" alt="KMD Precision Products Logo" style="max-width: 100%; height: auto;">
             </div>
         </section>
 
         <!-- Company Section -->
-        <section id="company">
+        <section id="company" class="container">
             <h2>Company</h2>
             <p style="text-align: center;">Learn about our mission, values, and the dedicated team behind our success.</p>
             <div class="grid">
@@ -295,79 +304,63 @@
         </section>
 
         <!-- Capabilities Section -->
-        <section id="capabilities">
+        <section id="capabilities" class="container">
             <h2>Capabilities</h2>
             <p style="text-align: center;">Dive into our diverse manufacturing capabilities that cater to various industries.</p>
-            <div class="grid-2x2">
+            <div class="grid">
                 <div class="card">
                     <img src="resources/cnc-machining.jpg" alt="CNC Machining">
-                    <div class="card-content">
-                        <h3>CNC Machining</h3>
-                        <p>Precision parts with tight tolerances.</p>
-                    </div>
+                    <h3>CNC Machining</h3>
+                    <p>Precision parts with tight tolerances.</p>
                 </div>
                 <div class="card">
                     <img src="resources/sheet-metal.jpg" alt="Sheet Metal Fabrication">
-                    <div class="card-content">
-                        <h3>Sheet Metal Fabrication</h3>
-                        <p>Custom metal components and assemblies.</p>
-                    </div>
+                    <h3>Sheet Metal Fabrication</h3>
+                    <p>Custom metal components and assemblies.</p>
                 </div>
                 <div class="card">
                     <img src="resources/die-casting.jpg" alt="Die Casting">
-                    <div class="card-content">
-                        <h3>Die Casting</h3>
-                        <p>High-volume production of metal parts.</p>
-                    </div>
+                    <h3>Die Casting</h3>
+                    <p>High-volume production of metal parts.</p>
                 </div>
                 <div class="card">
                     <img src="resources/metal-injection-molding.jpg" alt="Metal Injection Molding">
-                    <div class="card-content">
-                        <h3>Metal Injection Molding</h3>
-                        <p>Complex geometries with high precision.</p>
-                    </div>
+                    <h3>Metal Injection Molding</h3>
+                    <p>Complex geometries with high precision.</p>
                 </div>
             </div>
         </section>
 
         <!-- Products Section -->
-        <section id="products">
+        <section id="products" class="container">
             <h2>Products</h2>
             <p style="text-align: center;">Explore our range of high-quality manufactured products.</p>
-            <div class="grid-2x2">
+            <div class="grid">
                 <div class="card">
                     <img src="resources/cnc-parts.jpg" alt="CNC Machined Parts">
-                    <div class="card-content">
-                        <h3>CNC Machined Parts</h3>
-                        <p>Custom-made precision components.</p>
-                    </div>
+                    <h3>CNC Machined Parts</h3>
+                    <p>Custom-made precision components.</p>
                 </div>
                 <div class="card">
                     <img src="resources/sheet-metal-parts.jpg" alt="Sheet Metal Parts">
-                    <div class="card-content">
-                        <h3>Sheet Metal Parts</h3>
-                        <p>Versatile metal components for various applications.</p>
-                    </div>
+                    <h3>Sheet Metal Parts</h3>
+                    <p>Versatile metal components for various applications.</p>
                 </div>
                 <div class="card">
                     <img src="resources/die-cast-parts.jpg" alt="Die Cast Parts">
-                    <div class="card-content">
-                        <h3>Die Cast Parts</h3>
-                        <p>High-volume, consistent quality parts.</p>
-                    </div>
+                    <h3>Die Cast Parts</h3>
+                    <p>High-volume, consistent quality parts.</p>
                 </div>
                 <div class="card">
                     <img src="resources/mim-parts.jpg" alt="Metal Injection Molded Parts">
-                    <div class="card-content">
-                        <h3>Metal Injection Molded Parts</h3>
-                        <p>Complex, small-scale metal components.</p>
-                    </div>
+                    <h3>Metal Injection Molded Parts</h3>
+                    <p>Complex, small-scale metal components.</p>
                 </div>
             </div>
         </section>
 
         <!-- Resources Section -->
-        <section id="resources">
+        <section id="resources" class="container">
             <h2>Resources</h2>
             <p style="text-align: center;">Access valuable information and insights to enhance your projects.</p>
             <div class="grid">
@@ -390,9 +383,9 @@
         </section>
 
         <!-- Why Choose Us Section -->
-        <section id="why-choose-us" class="why-choose-us-section">
-            <h2 class="section-title">Why Choose Us</h2>
-            <p class="section-description">At KMD Precision Products, we are committed to delivering exceptional quality and service. Here are a few reasons why you should choose us for your manufacturing needs:</p>
+        <section id="why-choose-us" class="container">
+            <h2>Why Choose Us</h2>
+            <p style="text-align: center;">At KMD Precision Products, we are committed to delivering exceptional quality and service. Here are a few reasons why you should choose us for your manufacturing needs:</p>
             
             <div class="grid">
                 <div class="card">
@@ -424,7 +417,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="container">
             <h2>Contact Us</h2>
             <p style="text-align: center;">Get in touch with us for inquiries, quotes, or support. We're here to help!</p>
             <address style="text-align: center;">
