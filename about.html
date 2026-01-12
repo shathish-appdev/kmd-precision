@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | KMD Precision Products</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+:root{
+--primary-color:#007bff;
+--secondary-color:#0056b3;
+--text-color:#333;
+--background-color:#f9f9f9;
+--card-background:#fff;
+--card-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+body{
+margin:0;
+font-family:'Roboto',sans-serif;
+background:var(--background-color);
+color:var(--text-color);
+line-height:1.8;
+}
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 24px;
+}
+header{
+background:#fff;
+box-shadow:var(--card-shadow);
+padding:1.2rem 0;
+}
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+padding:0;
+margin:0;
+}
+nav ul li{margin:0 18px;}
+nav ul li a{
+text-decoration:none;
+color:var(--text-color);
+font-weight:500;
+}
+nav ul li a.active{color:var(--primary-color);}
+section{padding:80px 0;}
+h1,h2{text-align:center;margin-bottom:40px;}
+p{
+max-width:1000px;
+margin:0 auto 26px;
+text-align:center;
+}
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+margin-top:40px;
+}
+.card, .section-card{
+background:#fff;
+padding:32px;
+border-radius:10px;
+box-shadow:var(--card-shadow);
+text-align:center;
+transition:transform .25s ease, box-shadow .25s ease;
+position:relative;
+}
+.card:hover, .section-card:hover{
+transform:translateY(-4px) scale(1.02);
+box-shadow:0 10px 18px rgba(0,0,0,0.15);
+}
+.card .icon{
+font-size:2.5rem;
+color:var(--primary-color);
+margin-bottom:15px;
+display:block;
+}
+.points{
+list-style:none;
+padding:0;
+margin:0;
+text-align:left;
+}
+.points li{
+margin-bottom:14px;
+padding-left:18px;
+position:relative;
+}
+.points li::before{
+content:"•";
+position:absolute;
+left:0;
+color:var(--primary-color);
+font-size:18px;
+}
+.commitment{
+background:#004080;
+color:#fff;
+text-align:center;
+padding:40px 20px;
+border-radius:8px;
+margin-top:30px;
+}
+.commitment h2{
+color:#fff;
+margin-bottom:20px;
+}
+@media(max-width:768px){
+.grid-2, .grid{grid-template-columns:1fr;}
+section{padding:60px 0;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="container">
+<ul>
+<li><a href="index.html#home">Home</a></li>
+<li><a href="about.html" class="active">About Us</a></li>
+<li><a href="index.html#capabilities">Capabilities</a></li>
+<li><a href="index.html#products">Products</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<!-- ABOUT INTRO -->
+<section class="container">
+<h1>About KMD Precision Products</h1>
+
+<p>
+KMD Precision Products is a precision manufacturing company delivering high-quality plastic
+and metal components along with end-to-end manufacturing solutions for customers who
+demand accuracy, consistency, and reliability.
+</p>
+
+<p>
+Founded in 2017, KMD Precision Products has established itself as a dependable partner for
+global OEMs by supplying plastic injection molded parts, stamped components, and
+precision-machined parts manufactured using CNC and VMC technologies.
+</p>
+
+<p>
+We serve a broad range of industries including Automotive & EV, Home Appliances, Medical
+Equipment, Consumer Electronics, Hydraulics, Oil & Gas, and general industrial OEM
+applications.
+</p>
+
+<p>
+At KMD, we go beyond manufacturing — we collaborate with our customers to deliver
+engineered solutions that support innovation, efficiency, and long-term success.
+</p>
+</section>
+
+<!-- MANUFACTURING OVERVIEW -->
+<section class="container">
+<h2>Injection Molding & Precision Manufacturing Excellence</h2>
+
+<p>
+KMD Precision Products operates two distinct manufacturing business verticals — Plastic
+Injection Molding and Precision Machining (CNC & VMC) — each dedicated to delivering
+specialized, high-quality components for diverse industrial applications.
+</p>
+
+<div class="grid-2">
+<div class="card">
+<h3>Plastic Injection Molding</h3>
+<p>
+Our Injection Molding division focuses on the manufacture of Engineering and Non-Engineering
+plastic components, ensuring dimensional accuracy, surface finish, and repeatability.
+Functional engineering components are developed to meet application-specific performance
+requirements across industries.
+</p>
+</div>
+
+<div class="card">
+<h3>Precision Machining (CNC & VMC)</h3>
+<p>
+Our Precision Machining division specializes in CNC and VMC machined metal components,
+delivering tight tolerances, complex geometries, and consistent quality for demanding
+engineering applications.
+</p>
+</div>
+</div>
+</section>
+
+<!-- VISION & MISSION with icons -->
+<section class="container">
+<h2>Vision & Mission</h2>
+
+<div class="grid-2">
+<div class="card">
+<i class="fas fa-eye icon"></i>
+<h3>Our Vision</h3>
+<p>
+To be a globally trusted precision manufacturing partner, recognized for quality, innovation,
+and consistent customer satisfaction.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-rocket icon"></i>
+<h3>Our Mission</h3>
+<p>
+To deliver high-quality, precision-engineered components that meet customer expectations,
+continuously invest in advanced manufacturing technologies and process excellence, build
+long-term partnerships through reliability and transparency, and promote continuous
+improvement across all functions.
+</p>
+</div>
+</div>
+</section>
+
+<!-- QUALITY & MANUFACTURING COMMITMENT -->
+<section class="container">
+<h2>Quality & Manufacturing Commitment</h2>
+
+<p>
+At KMD Precision Products, quality is built into every stage of our manufacturing process.
+From raw material selection to final inspection, we follow strict quality controls to ensure
+dimensional accuracy, repeatability, and product reliability.
+</p>
+
+<h3 style="text-align:center;margin-top:50px;">Our Focus Includes</h3>
+
+<div class="grid">
+<div class="card">
+<p>Robust process control and inspection systems</p>
+</div>
+
+<div class="card">
+<p>Adherence to customer-specific quality requirements</p>
+</div>
+
+<div class="card">
+<p>Continuous improvement through lean manufacturing practices</p>
+</div>
+
+<div class="card">
+<p>Commitment to on-time delivery and consistent performance</p>
+</div>
+</div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="container">
+<h1>Why Choose KMD Precision Products</h1>
+
+<div class="section-card">
+<h2>Cost-Effective Manufacturing Solutions</h2>
+<p>Our lean manufacturing approach and optimized production processes enable us to deliver competitive pricing without compromising quality. From prototyping to high-volume production, we provide cost-effective solutions aligned with customer requirements.</p>
+</div>
+
+<div class="section-card">
+<h2>Advanced Manufacturing Technology</h2>
+<p>We operate state-of-the-art injection molding machines, CNC and VMC machining centers, and precision tooling systems to achieve tight tolerances, complex geometries, and consistent output. Our capabilities include multi-material molding, insert molding, and precision metal component manufacturing.</p>
+</div>
+
+<div class="section-card">
+<h2>Wide Range of Material Options</h2>
+<p>We work with a broad spectrum of materials to support both our Plastic Injection Molding and Precision Machining business verticals:</p>
+<ul>
+<p><strong>Plastic Components:</strong> Standard thermoplastics to advanced engineering and high-performance polymers, selected to meet mechanical, thermal, and aesthetic requirements.</p>
+<p><strong>Precision-Machined Metal Components:</strong> Aluminum, Brass, Copper, Steel, and Stainless Steel, ensuring strength, durability, and dimensional accuracy for demanding applications.</p>
+</ul>
+<p>Our strong partnerships with global resin suppliers and certified metal vendors ensure:</p>
+<ul>
+<li><strong>Consistent material quality</strong></li>
+<li><strong>Full traceability and documentation</strong></li>
+<li><strong>Reliable performance across production batches</strong></li>
+<li><strong>Compliance with customer and industry requirements</strong></li>
+</ul>
+</div>
+
+<div class="section-card">
+<h2>Strong Supply Chain & Scalable Production</h2>
+<p>Backed by a robust supplier ecosystem and efficient logistics network, KMD ensures uninterrupted production and on-time delivery. Our operations are designed to scale seamlessly, supporting low-volume, mid-volume, and mass-production programs.</p>
+</div>
+
+<div class="section-card">
+<h2>Proven Industry Expertise</h2>
+<p>We proudly serve leading OEMs and global brands across automotive, medical, electronics, and industrial sectors. Our reputation is built on precision engineering, dependable execution, and customer satisfaction.</p>
+</div>
+
+<div class="commitment">
+<h2>Our Commitment</h2>
+<p>At KMD Precision Products, quality, reliability, and continuous improvement define everything we do. We are committed to being a long-term manufacturing partner, delivering precision-engineered components that help our customers compete and succeed in global markets.</p>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2023 KMD Precision Products. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
