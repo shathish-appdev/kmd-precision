@@ -29,26 +29,44 @@ max-width:1200px;
 margin:auto;
 padding:0 24px;
 }
-header{
-background:#fff;
-box-shadow:var(--card-shadow);
-padding:1.2rem 0;
-}
-nav ul{
-list-style:none;
-display:flex;
-justify-content:center;
-padding:0;
-margin:0;
-}
-nav ul li{margin:0 18px;}
-nav ul li a{
-text-decoration:none;
-color:var(--text-color);
-font-weight:500;
-}
+header {
+            background-color: var(--card-background);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--card-shadow);
+        }
+nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
 nav ul li a.active{color:var(--primary-color);}
-section{padding:80px 0;}
+
+  section{padding:80px 0;}
 h1,h2{text-align:center;margin-bottom:40px;}
 p{
 max-width:1000px;
@@ -312,6 +330,7 @@ dimensional accuracy, repeatability, and product reliability.
 
 </body>
 </html>
+
 
 
 
